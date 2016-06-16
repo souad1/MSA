@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:background="#ffffff"
+    android:layout_height="fill_parent"
+
+
+
+    >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.dktique.msa_delegues.AjouterProspect"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulaire Ajout Prospect"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textColor="#08378e"
+            android:id="@+id/textView4"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="20dp"
+
+
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/imageView5"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/patient"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informations Générales"
+            android:textStyle="bold|italic"
+            android:typeface="sans"
+            android:textColor="#4b4444"
+            android:textSize="16dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/title1"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Nom :"
+            android:textSize="13dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView5"
+            android:layout_below="@+id/title1"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Entrer le nom du prespect"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView5"
+            android:id="@+id/Nom"
+            android:textSize="13dp"
+            android:layout_below="@+id/title1"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Prenom :"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView6"
+            android:textSize="13dp"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView6"
+            android:hint="Entrer le Prenom du prespect"
+            android:id="@+id/Prenom"
+            android:textSize="13dp"
+            android:layout_below="@+id/textView5"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Sexe :"
+            android:textSize="13dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView7"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sexehomme"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/textView6"
+            android:layout_toRightOf="@+id/textView7"
+
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homme"
+            android:id="@+id/homme"
+            android:textSize="13dp"
+            android:layout_below="@+id/textView6"
+            android:layout_toRightOf="@+id/sexehomme"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sexefemme"
+            android:layout_below="@+id/textView6"
+            android:layout_toRightOf="@+id/homme"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femme"
+            android:textSize="13dp"
+            android:id="@+id/femme"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/textView6"
+            android:layout_toRightOf="@+id/sexefemme"
+            android:layout_marginTop="30dp"
+
+            android:layout_alignParentRight="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+
+
+
+
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Age :"
+            android:textSize="13dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView8"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView6"
+            android:hint="Entrer Age du prospect"
+            android:textSize="13dp"
+            android:id="@+id/age"
+            android:layout_below="@+id/textView7"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Assurance :"
+            android:textSize="13dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView9"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/textView9"
+            android:textSize="11dp"
+            android:id="@+id/assurance1"
+            android:layout_below="@+id/textView8"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+
+        <TextView
+            android:textSize="13dp"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Profession :"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView10"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentLeft="true"
+
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/profession"
+            android:hint="Entrer Profession"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView10"
+            android:layout_below="@+id/textView9"
+            android:layout_marginLeft="10dp"
+            android:textSize="13dp"
+
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Adresse :"
+            android:layout_marginTop="30dp"
+            android:id="@+id/adresse"
+            android:layout_below="@+id/profession"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+
+
+
+        <EditText
+            android:textSize="13dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/adresse1"
+            android:hint="Entrer Adresse"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/adresse"
+            android:layout_below="@+id/profession"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informations de Contact"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:id="@+id/contact"
+            android:layout_below="@+id/adresse"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#4b4444"
+            android:textSize="16dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Tél :"
+            android:layout_marginTop="30dp"
+            android:id="@+id/tel"
+            android:layout_below="@+id/contact"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <EditText
+            android:textSize="13dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tel1"
+            android:hint="Entrer Numéro Télephone"
+            android:inputType="number"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tel"
+            android:layout_below="@+id/contact"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Tél Tuteur :"
+            android:layout_marginTop="30dp"
+            android:id="@+id/tuteur"
+            android:layout_below="@+id/tel"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <EditText
+            android:textSize="13dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tuteur1"
+            android:hint="Entrer Numérp Téléphone Tuteur"
+            android:inputType="number"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tuteur"
+            android:layout_below="@+id/tel"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="E-mail :"
+            android:layout_marginTop="30dp"
+            android:id="@+id/mail"
+            android:layout_below="@+id/tuteur"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <EditText
+            android:textSize="13dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mail1"
+            android:hint="Entrer Adresse E-mail"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/mail"
+            android:layout_below="@+id/tuteur"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:text="Email Tuteur"
+            android:layout_marginTop="30dp"
+            android:id="@+id/mailtuteur"
+            android:layout_below="@+id/mail"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <EditText
+            android:textSize="13dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mailtuteur1"
+            android:hint="Entrer Adresse E-mail du tuteur"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/mailtuteur"
+            android:layout_below="@+id/mail"
+            android:layout_marginLeft="8dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information Stomie"
+            android:layout_marginTop="30dp"
+            android:id="@+id/stomie"
+            android:layout_below="@+id/mailtuteur"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#4b4444"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+            />
+
+
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre Opérations"
+            android:layout_marginTop="30dp"
+            android:id="@+id/nbroperations"
+            android:layout_below="@+id/stomie"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <Spinner
+
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/nbroperations1"
+            android:layout_marginTop="25dp"
+            android:textSize="13dp"
+            android:layout_toRightOf="@+id/nbroperations"
+            android:layout_below="@+id/stomie"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Maldies Criniques"
+            android:layout_marginTop="30dp"
+            android:id="@+id/maladieschroniques"
+            android:layout_below="@+id/nbroperations"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <Spinner
+
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/maladieschroniques1"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/maladieschroniques"
+            android:layout_below="@+id/nbroperations"
+            android:layout_marginLeft="10dp"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Cause de stomie"
+            android:layout_marginTop="30dp"
+            android:id="@+id/causestomie"
+            android:layout_below="@+id/maladieschroniques"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <Spinner
+
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/causestomie1"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/causestomie"
+            android:layout_below="@+id/maladieschroniques"
+            android:layout_marginLeft="10dp"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Type de stomie"
+            android:layout_marginTop="30dp"
+            android:id="@+id/tyoestomie"
+            android:layout_below="@+id/causestomie"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <Spinner
+
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/typestomie1"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/tyoestomie"
+            android:layout_below="@+id/causestomie"
+            android:layout_marginLeft="10dp"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Durabilité stomie"
+            android:layout_marginTop="30dp"
+            android:id="@+id/durabilitestomie"
+            android:layout_below="@+id/tyoestomie"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+        <Spinner
+
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/durabilitestomie1"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/durabilitestomie"
+            android:layout_below="@+id/tyoestomie"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            android:textSize="13dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre poche/jour"
+            android:layout_marginTop="30dp"
+            android:id="@+id/nbrPoche"
+            android:layout_below="@+id/durabilitestomie"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+
+
+            />
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:id="@+id/nbrPoche1"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/durabilitestomie"
+            android:layout_below="@+id/durabilitestomie"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            android:textSize="13dp"
+            android:popupBackground="#cfcdcd"
+
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/annuler"
+            android:layout_below="@+id/nbrPoche1"
+            android:layout_marginLeft="10dp"
+            android:text="Annuler"
+            android:onClick="annuler"
+            android:typeface="serif"
+            android:textStyle="bold|italic"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:background="#08378e"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="45dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+
+
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/envoyer"
+            android:layout_below="@+id/nbrPoche1"
+            android:layout_marginLeft="10dp"
+            android:text="Envoyer"
+            android:typeface="serif"
+            android:textStyle="bold|italic"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:background="#08378e"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_toLeftOf="@+id/annuler"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:onClick="AddProspect"
+
+
+            />
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

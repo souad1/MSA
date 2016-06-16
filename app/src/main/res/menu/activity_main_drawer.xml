@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/ic_add_user"
+            android:title="Ajouter Prospect" />
+        <item
+            android:id="@+id/nav_produit"
+            android:icon="@drawable/ic_stomach_1"
+            android:title="Produits" />
+        <item
+            android:id="@+id/nav_prospect"
+            android:icon="@drawable/ic_user_list_1"
+            android:title="Prospects" />
+        <item
+            android:id="@+id/nav_deconnecter"
+            android:icon="@drawable/ic_logout"
+            android:title="Deconnecter" />
+    </group>
+
+</menu>

@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">MSA</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+
+    <string-array name="Assurance">
+        <item>CNAS</item>
+        <item>CASNOS</item>
+        <item>SHIFAA</item>
+    </string-array>
+
+
+    <string-array name="nombreOperation">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>plus de 5</item>
+    </string-array>
+
+
+    <string-array name="maladieChronoque">
+        <item>Allergie</item>
+        <item>Diabète</item>
+        <item>La tension artérielle</item>
+        <item>Problème Cardiologique</item>
+    </string-array>
+
+
+    <string-array name="CauseStomie">
+        <item>cancer</item>
+        <item>colite ulcéreuse</item>
+        <item>polypose familiale</item>
+        <item>maladie de Crohn</item>
+        <item>diverticule</item>
+        <item>plaies par balles</item>
+        <item>couteaux</item>
+        <item>accidents</item>
+        <item>Imperforation anale</item>
+        <item>absence de vessie</item>
+        <item>couteaux</item>
+    </string-array>
+
+    <string-array name="TypeStomie">
+        <item>Colostomie</item>
+        <item>Gastrostomie</item>
+        <item>Iléostomie</item>
+        <item>Sigmoidostomie</item>
+        <item>Trachéostomie</item>
+        <item>Urétérostomie</item>
+        <item>Vasovasostomie</item>
+        <item>Cystostomie</item>
+    </string-array>
+
+
+    <string-array name="DurabilitéStomie">
+        <item>Temporaire</item>
+        <item>Définitive</item>
+    </string-array>
+
+    <string-array name="nbrPoche">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>plus de 5</item>
+    </string-array>
+
+</resources>
