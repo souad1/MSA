@@ -57,7 +57,8 @@ public class getProspect extends AsyncTask<Void,Void,String> {
 
         try {
            // URL url = new URL ("http://10.0.2.163:8080/Prospects/GET");
-          URL url = new URL ("http://192.168.43.249:8080/getProspect");
+          //URL url = new URL ("http://192.168.43.249:8080/getProspect");//mon telephone reseau
+            URL url = new URL ("http://192.168.1.110:8080/getProspect"); //mon pc internet home
           //  URL url = new URL ("http://10.0.19.196:8080/getProspect");
 
               //URL url = new URL ("http://192.168.1.104:8080/getProspect");

@@ -30,9 +30,9 @@ public class AddProspect extends AsyncTask<String,Void,String> {
 
       //  Log.v("access 125","it'ssss  workingggg");
         try {
-          URL url = new URL("http://192.168.43.249:8080/addProspect");  // modifier l'adresse 10.0.2.163/Prospects/GET     ADD
+         // URL url = new URL("http://192.168.43.249:8080/addProspect");  // modifier l'adresse 10.0.2.163/Prospects/GET     ADD
           //  URL url = new URL("http://192.168.1.104:8080/Prospects/addProspect"); //mon pc with internet
-
+            URL url = new URL ("http://192.168.1.110:8080/addProspect");
            // URL url = new URL("http://192.168.8.106:8080/Prospects/POST");
             // conecter avec internet ds le pc hadjer
             //acceder a l'adresse

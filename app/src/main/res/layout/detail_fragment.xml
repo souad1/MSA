@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+   android:background="#ffffff"
     tools:context="com.example.dktique.msa.DetailPocheActivity">
 
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+
+        tools:context="com.example.dktique.msa.DetailPocheActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Détail Poche"
+        android:textSize="30dp"
+        android:paddingTop="20dp"
+        android:textColor="#1315b4"
+        android:layout_centerHorizontal="true"
+
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:id="@+id/textView3" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/coverImage"
-
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         />
@@ -21,11 +42,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nom1"
-        android:textSize="14dp"
-
-        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textColor="#291953"
         android:typeface="serif"
+        android:textStyle="bold|italic"
         android:layout_below="@+id/coverImage"
+        android:layout_marginTop="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         />
@@ -35,9 +57,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/marque1"
         android:layout_below="@+id/nom1"
-        android:textSize="14dp"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
-        android:typeface="normal"
+        android:typeface="sans"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -45,9 +68,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/taille1"
-        android:textSize="14dp"
+        android:textSize="16dp"
         android:textColor="#000000"
-        android:typeface="normal"
+        android:layout_marginTop="10dp"
+        android:typeface="sans"
         android:layout_below="@+id/marque1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -56,17 +80,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/prix1"
-        android:textSize="14dp"
-        android:textColor="#000000"
-        android:typeface="normal"
+        android:textSize="22dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#1315b4"
+        android:typeface="serif"
+        android:textStyle="bold|italic"
         android:layout_below="@+id/taille1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coordonnes"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:text="--Disponible au niveau de la maison MSA--"
+            android:textAlignment="center"
+            android:textColor="#1b1b1b"
+            android:typeface="normal"
+            android:textStyle="italic"
+            android:layout_below="@+id/prix1"
+            android:layout_centerHorizontal="true"
+
+          />
 
 
 
+</RelativeLayout>
 
+</ScrollView>
 
-
-</LinearLayout>

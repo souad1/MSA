@@ -32,10 +32,11 @@ public class DetailFragment extends Fragment {
 
             coverImage.setImageResource(poche.getCover());
 
-            nom.setText("Nom : " + poche.getNom());
-
-            prix.setText("Prix :" + poche.getPrix());
+            nom.setText(poche.getNom());
+            marque.setText(poche.getDescription());
             taille.setText("Diamètre: " + poche.getDiametre());
+            prix.setText(poche.getPrix());
+
 
 
 

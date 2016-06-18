@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
 
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="60dp"
+   android:background="#ffffff"
     tools:context="com.example.dktique.msa.MainActivity"
-    tools:showIn="@layout/app_bar_main"
-    android:background="@drawable/small"
 
     >
 
 
-</RelativeLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.example.dktique.msa.MainActivity"
+        android:background="@drawable/petite"
+
+        tools:showIn="@layout/app_bar_main">
+
+
+    </RelativeLayout>
+
+    </ScrollView>

@@ -3,12 +3,18 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
-    android:background="#ffffff"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
 
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="60dp"
+    android:background="#ffffff"
+    tools:context="com.example.dktique.msa.MainActivity"
+
     >
+
+
+
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,16 +22,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.example.dktique.msa.MainActivity"
-        tools:showIn="@layout/app_bar_main"
-        android:background="@drawable/big"
+        android:background="@drawable/grande"
 
-        >
+        tools:showIn="@layout/app_bar_main">
 
 
     </RelativeLayout>
+
 </ScrollView>
