@@ -1,9 +1,11 @@
 package com.example.dktique.msa;
 
+import java.io.Serializable;
+
 /**
  * Created by DKTIQUE on 03/05/2016.
  */
-public class Poche {
+public class Poche implements Serializable {
 
     private String nom;
     private String description;

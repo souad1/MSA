@@ -1,22 +1,37 @@
 package com.example.dktique.msa;
 
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListePochesStomie extends AppCompatActivity {
-
+    CustomAdapterListePoches customAdapterListePoches;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_poches_stomie);
-        CustomAdapterListePoches customAdapterListePoches= new CustomAdapterListePoches (this,getPocheList());
+          customAdapterListePoches= new CustomAdapterListePoches (this,getPocheList());
         ListView listView1 = (ListView) findViewById(R.id.listView);
         listView1.setAdapter(customAdapterListePoches);
         customAdapterListePoches.notifyDataSetChanged();
+
+
+
+     /*   listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                showView((Poche) customAdapterListePoches.getItem(position));
+            }
+        });
+*/
+
 
     }
 
@@ -58,6 +73,31 @@ public class ListePochesStomie extends AppCompatActivity {
         return  listeoches;
     }
 
+    public boolean isTwoPane() {
+
+        View v  = this.findViewById(R.id.frameLayout);
+        return (v!=null);
+
+    }
+
+    public void showView (Poche produit) {
+        if (isTwoPane()) {
+            DetailFragment detailFragment = new DetailFragment();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("produit", produit);
+            detailFragment.setArguments(bundle);
+            FragmentTransaction ft = this.getFragmentManager().beginTransaction();
+            ft.replace(R.id.frameLayout, detailFragment);
+
+            ft.commit();
+
+        } else {
+            Intent intent = new Intent(this, DetailPocheActivity.class);
+            intent.putExtra("produit", produit);
+            startActivity(intent);
+        }
+
+    }
 
 }
 

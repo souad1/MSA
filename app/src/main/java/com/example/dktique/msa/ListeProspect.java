@@ -31,17 +31,8 @@ public class ListeProspect extends AppCompatActivity {
         setContentView(R.layout.activity_liste_prospect);
 //******************************************************
 
-       // getProspect p= new getProspect(this).execute();
-       // getProspect p= new getProspect(this);
 
-    new getProspect(this).execute();
-        // p.execute();
-        /*String test = null;
-
-        getProspect  p = new getProspect(this);
-        p.onPostExecute(test);*/
-
-
+   // new getProspect(this).execute();
 
 
 
@@ -115,16 +106,7 @@ public class ListeProspect extends AppCompatActivity {
 
 
 
-        if (ListeProspect.listee.size()==0){Toast.makeText(this,"empty",Toast.LENGTH_SHORT).show();}
 
-        else{Toast.makeText(this,"not empty",Toast.LENGTH_SHORT).show();
-            for(int i=0;i<ListeProspect.listee.size();i++){
-
-                Toast.makeText(this,ListeProspect. listee.get(i).getPrenom(), Toast.LENGTH_SHORT).show();
-            }
-
-
-        }
     }
 
     /*
@@ -134,20 +116,28 @@ public class ListeProspect extends AppCompatActivity {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        // Adding child data
-        listDataHeader.add("Prospect 1");
-        listDataHeader.add("Prospect 2");
-        listDataHeader.add("Prospect 3");
+
+        if (ListeProspect.listee.size()==0){Toast.makeText(this,"Aucun aprospect",Toast.LENGTH_SHORT).show();}
+
+        else{Toast.makeText(this,"not empty",Toast.LENGTH_SHORT).show();
+            for(int i=0;i<ListeProspect.listee.size();i++){
+                listDataHeader.add(listee.get(i).getNom()+" "+listee.get(i).getPrenom());
+
+              //  Toast.makeText(this,ListeProspect. listee.get(i).getPrenom(), Toast.LENGTH_SHORT).show();
+            }
+
+
+        }
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("Age1");
-        top250.add("Assuré1");
-        top250.add("Type de stomie1");
-        top250.add("Nombre de poche par jour");
+        List<String> detail = new ArrayList<String>();
+        detail.add(listee.get(0).getNom());
+        detail.add(listee.get(0).getPrenom());
+        detail.add(listee.get(0).getDateNaissance());
 
 
-        List<String> nowShowing = new ArrayList<String>();
+
+     /*   List<String> nowShowing = new ArrayList<String>();
         nowShowing.add("Age2");
         nowShowing.add("Assuré");
         nowShowing.add("Type de stomie");
@@ -158,12 +148,17 @@ public class ListeProspect extends AppCompatActivity {
         comingSoon.add("Age");
         comingSoon.add("Assuré");
         comingSoon.add("Type de stomie");
-        comingSoon.add("Nombre de poche par jour");
+        comingSoon.add("Nombre de poche par jour");*/
 
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(2), top250); // Header, Child data
+        for(int i=0;i<ListeProspect.listee.size();i++){
+            listDataChild.put(listDataHeader.get(i), detail); // Header, Child data
+
+        }
+
+
+       // listDataChild.put(listDataHeader.get(1), top250); // Header, Child data
+      //  listDataChild.put(listDataHeader.get(2), top250); // Header, Child data
       //  listDataChild.put(listDataHeader.get(1), nowShowing);
        // listDataChild.put(listDataHeader.get(2), comingSoon);
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by DKTIQUE on 03/05/2016.
  */
-public class CustomAdapterListePoches extends BaseAdapter {
+public class CustomAdapterListePoches extends BaseAdapter  {
 
     private Context context;
     private List<Poche> ListePoches;

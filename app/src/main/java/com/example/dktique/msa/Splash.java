@@ -24,6 +24,12 @@ public class Splash   extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
+
+        //***************************
+        new getProspect(this).execute();
+
+        //***************************
+
          progressBar=(ProgressBar)findViewById(R.id.ProgressBar01);
 
 
@@ -44,7 +50,7 @@ public class Splash   extends Activity {
                     });
                     try
                     {
-                        Thread.sleep(200);
+                        Thread.sleep(400);
                     }
                     catch (InterruptedException e)
                     {
