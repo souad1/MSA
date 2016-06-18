@@ -21,10 +21,10 @@ public class DetailPocheActivity extends AppCompatActivity {
             finish();
         } else {
             setContentView(R.layout.activity_detail_poche);
-            Poche poche = (Poche) getIntent().getSerializableExtra("produit");
+            Poche poche = (Poche) getIntent().getSerializableExtra("poche");
             DetailFragment detailFragment = new DetailFragment();
             Bundle bundle = new Bundle();
-            bundle.putSerializable("produit", poche);
+            bundle.putSerializable("poche", poche);
             detailFragment.setArguments(bundle);
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.replace(R.id.frameLayout, detailFragment);

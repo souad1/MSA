@@ -20,8 +20,16 @@ public class ListePochesStomie extends AppCompatActivity {
           customAdapterListePoches= new CustomAdapterListePoches (this,getPocheList());
         ListView listView1 = (ListView) findViewById(R.id.listView);
         listView1.setAdapter(customAdapterListePoches);
-        customAdapterListePoches.notifyDataSetChanged();
+       // customAdapterListePoches.notifyDataSetChanged();
 
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), DetailPocheActivity.class);
+                intent.putExtra("poche", (Poche) customAdapterListePoches.getItem(position));
+                startActivity(intent);
+            }
+        });
 
 
      /*   listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
