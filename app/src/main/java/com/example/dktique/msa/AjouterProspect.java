@@ -1,5 +1,6 @@
 package com.example.dktique.msa;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -88,15 +89,8 @@ public class AjouterProspect extends AppCompatActivity {
     }
 
     public void annuler (View view){
-       // new getProspect(this);
-
-        //Log.v("String",prospect.getTitle());
-        //Log.v("String", prospect.getAuthor());
-
-
-        new getProspect(this).execute();
-
-
+        Intent inte=new Intent(this,MainActivity.class);
+        startActivity(inte);
     }
 
 

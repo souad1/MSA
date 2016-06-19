@@ -88,6 +88,8 @@ public class getProspect extends AsyncTask<Void,Void,String> {
                 prospect.setNom(jsonObject.get("nom").toString());
                 prospect.setPrenom(jsonObject.get("prenom").toString());
 
+                prospect.setNumpoche(Integer.parseInt(jsonObject.get("numpoche").toString()));
+
              //   prospect.setAdresse(jsonObject.get("adresse").toString());
                // prospect.setTuteur(jsonObject.get("tuteur").toString());
               //  prospect.setType_assurance(jsonObject.get("type_assurance").toString());

@@ -127,7 +127,7 @@ public class ListeProspect extends AppCompatActivity {
         for(int i=0;i<ListeProspect.listee.size();i++) {
             detail.add(listee.get(i).getNom());
             detail.add(listee.get(i).getPrenom());
-            detail.add(listee.get(i).getAdresse());
+            detail.add(listee.get(i).getNumpoche().toString());
         }
      /*   List<String> nowShowing = new ArrayList<String>();
         nowShowing.add("Age2");
