@@ -111,7 +111,7 @@ public class ListeProspect extends AppCompatActivity {
 
         if (ListeProspect.listee.size()==0){Toast.makeText(this,"Aucun aprospect",Toast.LENGTH_SHORT).show();}
 
-        else{Toast.makeText(this,"not empty",Toast.LENGTH_SHORT).show();
+        else{Toast.makeText(this,"Liste des prospects",Toast.LENGTH_SHORT).show();
             for(int i=0;i<ListeProspect.listee.size();i++){
                 listDataHeader.add(listee.get(i).getNom()+" "+listee.get(i).getPrenom());
 
