@@ -15,7 +15,7 @@ public class DetailPocheActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_poche);
         Configuration config = getResources().getConfiguration();
-     /*   if ((config.orientation == Configuration.ORIENTATION_LANDSCAPE)
+      /* if ((config.orientation == Configuration.ORIENTATION_LANDSCAPE)
                 &&(config.smallestScreenWidthDp >= 600)) {
             finish();
         } else {*/
@@ -28,7 +28,7 @@ public class DetailPocheActivity extends AppCompatActivity {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.replace(R.id.frameLayout, detailFragment);
             ft.commit();
-       // }
+       //}
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 

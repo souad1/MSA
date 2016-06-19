@@ -207,7 +207,7 @@
         <TextView
             android:layout_width="72dp"
             android:layout_height="wrap_content"
-            android:text="Age :"
+            android:text="Date de naissance :"
             android:textSize="13dp"
             android:layout_marginTop="30dp"
             android:id="@+id/textView8"
@@ -223,7 +223,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/textView6"
-            android:hint="Entrer Age du prospect"
+            android:hint="Entrer Date de naissance"
+            android:inputType="date"
             android:textSize="13dp"
             android:id="@+id/age"
             android:layout_below="@+id/textView7"
@@ -439,7 +440,7 @@
         <TextView
             android:layout_width="74dp"
             android:layout_height="wrap_content"
-            android:text="Email Tuteur"
+            android:text="Email  :"
             android:layout_marginTop="30dp"
             android:id="@+id/mailtuteur"
             android:layout_below="@+id/mail"
@@ -487,7 +488,7 @@
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Nombre Opérations"
+            android:text="Nombre Opérations :"
             android:layout_marginTop="30dp"
             android:id="@+id/nbroperations"
             android:layout_below="@+id/stomie"
@@ -517,7 +518,7 @@
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Maldies Criniques"
+            android:text="Maldies Criniques :"
             android:layout_marginTop="30dp"
             android:id="@+id/maladieschroniques"
             android:layout_below="@+id/nbroperations"
@@ -546,7 +547,7 @@
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Cause de stomie"
+            android:text="Cause de stomie :"
             android:layout_marginTop="30dp"
             android:id="@+id/causestomie"
             android:layout_below="@+id/maladieschroniques"
@@ -576,7 +577,7 @@
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Type de stomie"
+            android:text="Type de stomie :"
             android:layout_marginTop="30dp"
             android:id="@+id/tyoestomie"
             android:layout_below="@+id/causestomie"
@@ -606,7 +607,7 @@
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Durabilité stomie"
+            android:text="Durabilité stomie :"
             android:layout_marginTop="30dp"
             android:id="@+id/durabilitestomie"
             android:layout_below="@+id/tyoestomie"
@@ -664,11 +665,44 @@
 
             />
 
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="Date Ajout :"
+            android:textSize="13dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/date"
+            android:layout_below="@+id/nbrPoche1"
+            android:layout_alignParentLeft="true"
+            android:typeface="sans"
+            android:textColor="#000000"
+            />
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView6"
+            android:hint=" Date d'ajout"
+            android:inputType="date"
+            android:textSize="13dp"
+            android:id="@+id/date1"
+            android:layout_below="@+id/nbrPoche1"
+            android:layout_marginLeft="10dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+
+            />
+
+
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:id="@+id/annuler"
-            android:layout_below="@+id/nbrPoche1"
+            android:layout_below="@+id/date"
             android:layout_marginLeft="10dp"
             android:text="Annuler"
             android:onClick="annuler"
@@ -694,7 +728,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:id="@+id/envoyer"
-            android:layout_below="@+id/nbrPoche1"
+            android:layout_below="@+id/date"
             android:layout_marginLeft="10dp"
             android:text="Envoyer"
             android:typeface="serif"

@@ -29,45 +29,32 @@ import java.util.List;
 public class getProspect extends AsyncTask<Void,Void,String> {
     private Context context;
     List<Prospect> liste;
-
     public List<Prospect> getListe() {
         return liste;
     }
-    // ProgressBar pb;
-
     public getProspect(Context context) {
         this.context = context;
     }
 
 
-    /*  @Override
-    protected void onPreExecute() {
-        pb = (ProgressBar) ((Activity)context).findViewById(R.id.progressBar);
-        pb.setVisibility(View.VISIBLE);
-    }*/
-
-
-
 
     @Override
-    protected String doInBackground(Void... params) { // c un tableau
+    protected String doInBackground(Void... params) {
 
         String data;
         StringBuilder result= new StringBuilder();
 
         try {
-           // URL url = new URL ("http://10.0.2.163:8080/Prospects/GET");
-          //URL url = new URL ("http://192.168.43.249:8080/getProspect");//mon telephone reseau
-            URL url = new URL ("http://192.168.1.110:8080/getProspect"); //mon pc internet home
+            URL url = new URL ("http://192.168.1.104:8080/Prospects/GET");
+            //URL url = new URL ("http://192.168.43.249:8080/Prospects/GET");//mon telephone reseau
+           // URL url = new URL ("http://192.168.1.103:8080/getProspect"); //mon pc internet home
           //  URL url = new URL ("http://10.0.19.196:8080/getProspect");
-
               //URL url = new URL ("http://192.168.1.104:8080/getProspect");
-
            // URL url = new URL ("http:// 10.0.19.196:8080/Prospects/GET");
 
 
             HttpURLConnection httpURLConnection=(HttpURLConnection) url.openConnection();
-            httpURLConnection.setConnectTimeout(5000);//5000
+            httpURLConnection.setConnectTimeout(5000);
             InputStream is = httpURLConnection.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
             while ((data = reader.readLine()) != null) {
@@ -80,18 +67,13 @@ public class getProspect extends AsyncTask<Void,Void,String> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-       Log.v("resut", result.toString());
+      // Log.v("resut", result.toString());
         return result.toString();
     }
 
     @Override
     protected void onPostExecute(String s) {//afficher le resultat
-       // List<Prospect>
                 liste = new ArrayList<>();
-//        pb.setVisibility(View.VISIBLE);
-
-        // Gson gson = new Gson();
-        // if (!s.equals("")) {
 
         try {
             JSONArray jsonArray = new JSONArray(s);
@@ -99,9 +81,20 @@ public class getProspect extends AsyncTask<Void,Void,String> {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Prospect prospect= new Prospect();
+               /* prospect.setNum_tel_tuteur(jsonObject.get("num_tel_tuteur").toString());
+                prospect.setAdresse_mail(jsonObject.get("adresse_mail").toString());
+                //date
+                */
                 prospect.setNom(jsonObject.get("nom").toString());
                 prospect.setPrenom(jsonObject.get("prenom").toString());
-               // prospect.setTitle(jsonObject.get("idProspect").toString());
+
+             //   prospect.setAdresse(jsonObject.get("adresse").toString());
+               // prospect.setTuteur(jsonObject.get("tuteur").toString());
+              //  prospect.setType_assurance(jsonObject.get("type_assurance").toString());
+                //num poche
+
+
+
 
                ListeProspect.listee.add(prospect);
                // liste.add(prospect);
@@ -110,15 +103,8 @@ public class getProspect extends AsyncTask<Void,Void,String> {
             e.printStackTrace();
         }
 
-
-       // if (ListeProspect.listee.size()==0){Toast.makeText(context,"emptyyyyyyyyyyy",Toast.LENGTH_SHORT).show();}
-        // TextView textView = (Activity)context.findViewbyId();
-    /*  for(int i=0;i<liste.size();i++){
-
-           Toast.makeText(context,liste.get(i).getNom(), Toast.LENGTH_SHORT).show();
-        }*/
     }
 
-    //   }
+
 }
 

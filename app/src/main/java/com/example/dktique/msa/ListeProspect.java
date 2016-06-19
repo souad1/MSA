@@ -29,14 +29,6 @@ public class ListeProspect extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_prospect);
-//******************************************************
-
-
-   // new getProspect(this).execute();
-
-
-
-
 
 // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -79,7 +71,7 @@ public class ListeProspect extends AppCompatActivity {
             @Override
             public void onGroupCollapse(int groupPosition) {
                 Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Collapsed",
+                        listDataHeader.get(groupPosition) + "",
                         Toast.LENGTH_SHORT).show();
 
             }
@@ -131,12 +123,12 @@ public class ListeProspect extends AppCompatActivity {
 
         // Adding child data
         List<String> detail = new ArrayList<String>();
-        detail.add(listee.get(0).getNom());
-        detail.add(listee.get(0).getPrenom());
-        detail.add(listee.get(0).getDateNaissance());
 
-
-
+        for(int i=0;i<ListeProspect.listee.size();i++) {
+            detail.add(listee.get(i).getNom());
+            detail.add(listee.get(i).getPrenom());
+            detail.add(listee.get(i).getAdresse());
+        }
      /*   List<String> nowShowing = new ArrayList<String>();
         nowShowing.add("Age2");
         nowShowing.add("Assuré");
@@ -151,8 +143,19 @@ public class ListeProspect extends AppCompatActivity {
         comingSoon.add("Nombre de poche par jour");*/
 
 
+
+        int j=0,x=0;
+
         for(int i=0;i<ListeProspect.listee.size();i++){
-            listDataChild.put(listDataHeader.get(i), detail); // Header, Child data
+            List<String> detail1= new ArrayList<String>();
+
+            while(j<3+x){
+                detail1.add(detail.get(j));
+                j++;
+            }
+
+            listDataChild.put(listDataHeader.get(i), detail1); // Header, Child data
+            x=x+3;
 
         }
 
