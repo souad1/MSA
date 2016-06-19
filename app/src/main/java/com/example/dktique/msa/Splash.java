@@ -26,6 +26,7 @@ public class Splash   extends Activity {
         setContentView(R.layout.activity_splash);
 
         //***************************
+        ListeProspect.listee.clear();
         new getProspect(this).execute();
 
         //***************************
