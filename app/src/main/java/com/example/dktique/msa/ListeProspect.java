@@ -125,9 +125,12 @@ public class ListeProspect extends AppCompatActivity {
         List<String> detail = new ArrayList<String>();
 
         for(int i=0;i<ListeProspect.listee.size();i++) {
-            detail.add(listee.get(i).getNom());
-            detail.add(listee.get(i).getPrenom());
-            detail.add(listee.get(i).getNumpoche().toString());
+           // detail.add("Nom: " + listee.get(i).getNom());
+           // detail.add("Prenom: "+listee.get(i).getPrenom());
+            detail.add(listee.get(i).getNumpoche().toString()+" poches/jour ");
+            detail.add("Téléphone: " + listee.get(i).getNumeroTel().toString());
+            detail.add("Date Naissance: " + listee.get(i).getDateNaissance().toString());
+            detail.add("Date Ajout: " +listee.get(i).getDateProspect().toString());
         }
      /*   List<String> nowShowing = new ArrayList<String>();
         nowShowing.add("Age2");
@@ -149,13 +152,13 @@ public class ListeProspect extends AppCompatActivity {
         for(int i=0;i<ListeProspect.listee.size();i++){
             List<String> detail1= new ArrayList<String>();
 
-            while(j<3+x){
+            while(j<4+x){
                 detail1.add(detail.get(j));
                 j++;
             }
 
             listDataChild.put(listDataHeader.get(i), detail1); // Header, Child data
-            x=x+3;
+            x=x+4;
 
         }
 

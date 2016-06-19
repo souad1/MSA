@@ -20,7 +20,10 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -87,10 +90,50 @@ public class getProspect extends AsyncTask<Void,Void,String> {
                 */
                 prospect.setNom(jsonObject.get("nom").toString());
                 prospect.setPrenom(jsonObject.get("prenom").toString());
-
                 prospect.setNumpoche(Integer.parseInt(jsonObject.get("numpoche").toString()));
+                prospect.setNumeroTel(jsonObject.get("numTelephone").toString());
 
-             //   prospect.setAdresse(jsonObject.get("adresse").toString());
+
+                String dateStr = jsonObject.getString("dateNaissance");
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+               // SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd, yyyy");
+                Date birthDate = null;
+                try {
+                    birthDate = sdf.parse(dateStr);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+//then
+                prospect.setDateNaissance(birthDate);
+
+
+               /* String dateAjout= jsonObject.getString("dateProspect");
+                SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+                Date date = formatter.parse(jsonObject.getString("dateProspect").toString());
+                String formattedDate = formatter.format(date);*/
+
+
+                String dateAjout= jsonObject.getString("dateProspect");
+                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+                Date Date1 = null;
+                try {
+                    Date1 = sdf1.parse(dateAjout);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+//then
+                prospect.setDateProspect(Date1);
+
+                //  prospect.getDateNaissance(new Date(jsonObject.get("dateNaissance").toString()));
+
+                //    prospect.setDate_naissance(new Date(jsonObject.get("dateNaissance").toString()));
+
+                //    prospect.setDate_naissance(new Date(jsonObject.get("dateNaissance").toString()));
+
+                //   prospect.setAdresse((jsonObject.get("adresse").toString()));
+
+
+                //   prospect.setAdresse(jsonObject.get("adresse").toString());
                // prospect.setTuteur(jsonObject.get("tuteur").toString());
               //  prospect.setType_assurance(jsonObject.get("type_assurance").toString());
                 //num poche
